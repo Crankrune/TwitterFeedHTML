@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Twitter</title>
+    <link rel="stylesheet" href="twitter.css">
+    <link rel="icon" type="image/svg" sizes="16x16" href="logo-blue.svg">
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function () {
+            // Parses the document body and    
+            // inserts <img> tags in place of Unicode Emojis    
+            twemoji.parse(document.body,
+                { folder: 'svg', ext: '.svg' } // This is to specify to Twemoji to use SVGs and not PNGs
+            );
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header">Home</header>
+    {% for twt in tweets %}
+    <article class="article">
+        <div class="content">
+            <div class="spacer"></div>
+            <div class="userinfo">
+                <a href="{{twt.user_url}}">
+                    <img class="profilepic" src="{{twt.profile_pic}}"></img>
+                </a>
+                <a href="{{twt.user_url}}" class="userat">
+                    <div class="boldtext">{{twt.user_name}}</div>
+                    <div class="lighttext">{{twt.screen_name}}</div>
+                </a>
+            </div>
+            <span class="tweettext">{{twt.text}}</span>
+            <div class="tweetinfo">
+                <a href="{{twt.tweet_url}}" class="lighttext">{{twt.tweet_time}}</a>
+                · 
+                <a href="https://help.twitter.com/using-twitter/how-to-tweet#source-labels" class="lighttext">{{twt.source}}</a>
+            </div>
+            <div class="tweetstats">
+                <a href="{{twt.tweet_url}}/retweets" class="stat">
+                    <span class="boldtext">{{twt.retweet_count}}</span><span class="lighttext"> Retweets</span>
+                </a>
+                <!-- <a href="quotetweeturl" class="stat">
+                    <span class="boldtext">1</span><span class="lighttext"> Quote Tweets</span>
+                </a> -->
+                <a href="{{twt.tweet_url}}/likes" class="stat">
+                    <span class="boldtext">{{twt.favorite_count}}</span><span class="lighttext"> Likes</span>
+                </a>
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+</body>
+
+</html>

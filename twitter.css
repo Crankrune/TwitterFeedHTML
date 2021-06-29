@@ -1,0 +1,184 @@
+body {
+    background-color: rgb(21, 32, 43);
+    margin: 0;
+    width: 98%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.stat:hover {
+    color: rgb(136, 153, 166);
+    text-decoration: underline;
+}
+
+a.lighttext:hover {
+    color: rgb(136, 153, 166);
+    text-decoration: underline;
+}
+
+a .lighttext:hover {
+    color: rgb(136, 153, 166);
+    text-decoration: underline;
+}
+
+a .boldtext:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+a.userat .lighttext:hover {
+    text-decoration: none;
+}
+
+.header {
+    align-items: stretch;
+    background-color: rgb(21, 32, 43);
+    border-color: rgb(56, 68, 77);
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+    display: flex;
+    flex-basis: auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    margin: 0 auto;
+    margin-top: -1px;
+    padding-left: 24px;
+    padding-right: 8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    position: sticky;
+    top: 0;
+    width: 600px;
+    z-index: 100;
+}
+
+.article {
+    align-items: stretch;
+    border-color: rgb(56, 68, 77);
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: -1px;
+    width: 600px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+.spacer {
+    padding-top: 12px;
+}
+
+.userinfo {
+    display: flex;
+    flex-basis: auto;
+    flex-direction: row;
+    font-size: 15px;
+    margin-bottom: 4px;
+    position: relative;
+}
+
+.userat {
+    display: flex;
+    flex-direction: column;
+}
+
+.profilepic {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    flex-basis: 48px;
+    flex-direction: column;
+    margin-right: 12px;
+    position: relative;
+    width: 48px;
+    z-index: -1;
+}
+
+.tweettext {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 12px;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    width: 100%;
+}
+
+.at {
+    color: rgb(27, 149, 224);
+    display: inline;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 28px;
+    text-decoration: none;
+}
+
+.at:hover {
+    color: rgb(27, 149, 224);
+    text-decoration: underline;
+}
+
+.tweetinfo {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.tweetstats {
+    border-color: rgb(56, 68, 77);
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.stat {
+    margin-right: 20px;
+}
+
+.boldtext {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.lighttext {
+    color: rgb(136, 153, 166);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+img.emoji {
+    width: 1.375rem;
+    height: 1.375rem;
+    display: inline-block;
+    user-select: text;
+    vertical-align: bottom;
+}
